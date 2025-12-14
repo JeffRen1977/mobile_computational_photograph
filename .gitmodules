@@ -1,0 +1,30 @@
+[submodule "AI_ISP"]
+	path = AI_ISP
+	url = https://github.com/JeffRen1977/isp_pipeline.git
+[submodule "AutoExposure"]
+	path = AutoExposure
+	url = https://github.com/JeffRen1977/auto-exposure.git
+[submodule "Autofocus"]
+	path = Autofocus
+	url = https://github.com/JeffRen1977/auto-focus.git
+[submodule "AutoWhiteBalance"]
+	path = AutoWhiteBalance
+	url = https://github.com/JeffRen1977/auto-white-balance.git
+[submodule "camera_tuning"]
+	path = camera_tuning
+	url = https://github.com/JeffRen1977/camera_tuning.git
+[submodule "HDR"]
+	path = HDR
+	url = https://github.com/JeffRen1977/hdr.git
+[submodule "MultiCamera"]
+	path = MultiCamera
+	url = https://github.com/JeffRen1977/multicamera.git
+[submodule "super_resolution"]
+	path = super_resolution
+	url = https://github.com/JeffRen1977/super_resolution.git
+[submodule "video_bokeh"]
+	path = video_bokeh
+	url = https://github.com/JeffRen1977/video_bokeh.git
+[submodule "video_stablization"]
+	path = video_stablization
+	url = https://github.com/JeffRen1977/video_stablization.git
