@@ -1,21 +1,21 @@
 # Mobile Computational Photography
 
-A comprehensive collection of computational photography projects and implementations, organized as a monorepo with git submodules.
+Companion code for the book **"Mobile Computational Photography"**. Each folder maps to one or more book chapters and is maintained as a separate git submodule.
 
 ## 📁 Project Structure
 
-This repository contains the following projects, each maintained as a separate git repository:
-
-- **AI_ISP** - AI-powered Image Signal Processing pipeline
-- **AutoExposure** - Automatic exposure control system
-- **Autofocus** - Autofocus algorithms and implementations
-- **AutoWhiteBalance** - Automatic white balance correction
-- **camera_tuning** - Camera tuning and adaptive ISP demos
-- **HDR** - High Dynamic Range imaging
-- **MultiCamera** - Multi-camera calibration and processing
-- **super_resolution** - Super resolution algorithms
-- **video_bokeh** - Video bokeh effects
-- **video_stablization** - Video stabilization techniques
+| Folder | Chapter(s) | Description |
+|--------|-----------|-------------|
+| **AI_ISP** | 3-6 | AI-powered Image Signal Processing pipeline |
+| **Autofocus** | 5 | PDAF / CDAF autofocus algorithms |
+| **camera_tuning** | 7 | AI-driven ISP tuning automation |
+| **AutoWhiteBalance** | 9 | Automatic white balance correction |
+| **AutoExposure** | 9 | Automatic exposure control system |
+| **HDR** | 13 | High Dynamic Range imaging |
+| **MultiCamera** | 15 | Multi-camera calibration and fusion |
+| **video_stablization** | 17 | Video stabilization techniques |
+| **video_bokeh** | 19 | Video bokeh effects |
+| **super_resolution** | 22 | Super resolution algorithms |
 
 ## 🚀 Quick Start
 
@@ -24,7 +24,7 @@ This repository contains the following projects, each maintained as a separate g
 To clone this repository and all submodules in one command:
 
 ```bash
-git clone --recursive https://github.com/YOUR_USERNAME/Mobile_Computational_photograph.git
+git clone --recursive https://github.com/JeffRen1977/Mobile_Computational_photograph.git
 cd Mobile_Computational_photograph
 ```
 
@@ -94,4 +94,5 @@ Each project contains its own documentation:
 ## 📄 License
 
 Please refer to individual project repositories for license information.
+
 
