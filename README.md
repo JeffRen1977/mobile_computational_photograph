@@ -1,98 +1,112 @@
-# Mobile Computational Photography
+# Mobile Computational Photography — Companion Code
 
-Companion code for the book **"Mobile Computational Photography"**. Each folder maps to one or more book chapters and is maintained as a separate git submodule.
+This repository contains the source code for the book **"Mobile Computational Photography"**. Each chapter's code lives in its own folder and its own Git repository. This parent repository ties them all together using [Git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules), so you can grab everything with a single command.
 
-## 📁 Project Structure
+## Repository Structure
 
-| Folder | Chapter(s) | Description |
-|--------|-----------|-------------|
-| **AI_ISP** | 3-6 | AI-powered Image Signal Processing pipeline |
-| **Autofocus** | 5 | PDAF / CDAF autofocus algorithms |
-| **camera_tuning** | 7 | AI-driven ISP tuning automation |
-| **AutoWhiteBalance** | 9 | Automatic white balance correction |
-| **AutoExposure** | 9 | Automatic exposure control system |
-| **HDR** | 13 | High Dynamic Range imaging |
-| **MultiCamera** | 15 | Multi-camera calibration and fusion |
-| **video_stablization** | 17 | Video stabilization techniques |
-| **video_bokeh** | 19 | Video bokeh effects |
-| **super_resolution** | 22 | Super resolution algorithms |
+| Folder | Chapter(s) | Topic |
+|--------|-----------|-------|
+| `AI_ISP` | 3–6 | Image Signal Processing pipeline |
+| `Autofocus` | 5 | PDAF / CDAF autofocus algorithms |
+| `camera_tuning` | 7 | AI-driven ISP tuning automation |
+| `AutoWhiteBalance` | 9 | Automatic white balance correction |
+| `AutoExposure` | 9 | Automatic exposure control |
+| `HDR` | 13 | High Dynamic Range imaging |
+| `MultiCamera` | 15 | Multi-camera calibration and fusion |
+| `video_stablization` | 17 | Video stabilization techniques |
+| `video_bokeh` | 19 | Video bokeh effects |
+| `super_resolution` | 22 | Super resolution algorithms |
 
-## 🚀 Quick Start
+## Getting Started
 
-### Clone Everything at Once
+### Option A — Clone everything (recommended)
 
-To clone this repository and all submodules in one command:
+This downloads the parent repo **and** all chapter code in one step:
 
 ```bash
-git clone --recursive https://github.com/JeffRen1977/Mobile_Computational_photograph.git
-cd Mobile_Computational_photograph
+git clone --recursive https://github.com/JeffRen1977/mobile_computational_photograph.git
+cd mobile_computational_photograph
 ```
 
-If you've already cloned the repository without submodules, initialize them with:
+> **What does `--recursive` do?**  Each chapter folder is a Git submodule — a pointer to a separate repository. The `--recursive` flag tells Git to also clone every submodule so the folders are populated with code instead of being empty.
+
+### Option B — Clone a single chapter
+
+If you only need one chapter, clone its repository directly:
+
+```bash
+# Example: clone just the HDR chapter
+git clone https://github.com/JeffRen1977/hdr.git
+```
+
+See the [Individual Repositories](#individual-repositories) section below for all links.
+
+### Option C — You already cloned without `--recursive`
+
+If the chapter folders are empty, run:
 
 ```bash
 git submodule update --init --recursive
 ```
 
-### Update All Submodules
+This initializes and downloads all submodules after the fact.
 
-To update all submodules to their latest commits:
+## Setting Up the Python Environment
+
+All chapters share a single virtual environment located one level above each chapter folder:
 
 ```bash
+# Create the shared virtual environment (run once)
+python3 -m venv virtual_env
+
+# Activate it
+source virtual_env/bin/activate      # macOS / Linux
+# virtual_env\Scripts\activate       # Windows
+
+# Install a chapter's dependencies
+cd HDR
+pip install -r requirements.txt
+```
+
+Each chapter folder has its own `requirements.txt`. Activate the environment, `cd` into a chapter, and install.
+
+## Updating to the Latest Code
+
+To pull the latest changes for every chapter:
+
+```bash
+git pull
 git submodule update --remote --recursive
 ```
 
-### Work with Individual Projects
+This fetches the newest commit from each chapter's repository.
 
-Each project is a separate git repository. You can:
+## Running Tests
 
-- Navigate to any project directory and work with it independently
-- Each project has its own README with specific setup instructions
-- Check individual project requirements in their respective `requirements.txt` files
+Every chapter includes a pytest test suite. From any chapter folder:
 
-## 📋 Requirements
+```bash
+source ../virtual_env/bin/activate
+python3 -m pytest tests/ -v
+```
 
-Each project has its own requirements. Please refer to the individual project READMEs for specific setup instructions.
+## Individual Repositories
 
-## 🔧 Setup
+You can also visit or clone each chapter's code independently:
 
-1. Clone the repository with submodules (see Quick Start above)
-2. Navigate to the project you want to work with
-3. Follow the project-specific setup instructions in that project's README
-4. Install project-specific requirements
+| Chapter | Repository |
+|---------|-----------|
+| AI ISP (Ch. 3–6) | [JeffRen1977/isp_pipeline](https://github.com/JeffRen1977/isp_pipeline) |
+| Autofocus (Ch. 5) | [JeffRen1977/auto-focus](https://github.com/JeffRen1977/auto-focus) |
+| Camera Tuning (Ch. 7) | [JeffRen1977/camera_tuning](https://github.com/JeffRen1977/camera_tuning) |
+| Auto White Balance (Ch. 9) | [JeffRen1977/auto-white-balance](https://github.com/JeffRen1977/auto-white-balance) |
+| Auto Exposure (Ch. 9) | [JeffRen1977/auto-exposure](https://github.com/JeffRen1977/auto-exposure) |
+| HDR (Ch. 13) | [JeffRen1977/hdr](https://github.com/JeffRen1977/hdr) |
+| MultiCamera (Ch. 15) | [JeffRen1977/multicamera](https://github.com/JeffRen1977/multicamera) |
+| Video Stabilization (Ch. 17) | [JeffRen1977/video_stablization](https://github.com/JeffRen1977/video_stablization) |
+| Video Bokeh (Ch. 19) | [JeffRen1977/video_bokeh](https://github.com/JeffRen1977/video_bokeh) |
+| Super Resolution (Ch. 22) | [JeffRen1977/super_resolution](https://github.com/JeffRen1977/super_resolution) |
 
-## 📝 Notes
+## License
 
-- The `virtual_env` folder is excluded from version control
-- Each project maintains its own git history and can be updated independently
-- The `data` folder contains shared data files used across projects
-
-## 🤝 Contributing
-
-Each project is maintained separately. Please contribute to individual projects through their respective repositories.
-
-## 📚 Documentation
-
-Each project contains its own documentation:
-- Individual README files in each project directory
-- Project-specific documentation and guides
-- Example scripts and demos
-
-## 🔗 Individual Repositories
-
-- [AI ISP Pipeline](https://github.com/JeffRen1977/isp_pipeline)
-- [Auto Exposure](https://github.com/JeffRen1977/auto-exposure)
-- [Autofocus](https://github.com/JeffRen1977/auto-focus)
-- [Auto White Balance](https://github.com/JeffRen1977/auto-white-balance)
-- [Camera Tuning](https://github.com/JeffRen1977/camera_tuning)
-- [HDR](https://github.com/JeffRen1977/hdr)
-- [MultiCamera](https://github.com/JeffRen1977/multicamera)
-- [Super Resolution](https://github.com/JeffRen1977/super_resolution)
-- [Video Bokeh](https://github.com/JeffRen1977/video_bokeh)
-- [Video Stabilization](https://github.com/JeffRen1977/video_stablization)
-
-## 📄 License
-
-Please refer to individual project repositories for license information.
-
-
+Please refer to individual chapter repositories for license information.

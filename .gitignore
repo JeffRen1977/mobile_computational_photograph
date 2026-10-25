@@ -1,3 +1,7 @@
+# Book source (not distributed with code)
+book/
+slides/
+
 # Virtual environment
 virtual_env/
 venv/
@@ -22,5 +26,8 @@ Thumbs.db
 *.tmp
 *.log
 *.bak
+
+# Results / outputs
+results/
 
 
