@@ -4,24 +4,13 @@
   <img src="computational_cover.jpg" alt="Mobile Computational Photography — Book Cover" width="300"/>
 </p>
 
-This repository contains the source code and teaching materials for the book **"Mobile Computational Photography"** by **Jianfeng Ren** and **Junwei Han**, published by Springer.
+This repository contains the source code for the book **"Mobile Computational Photography"** by **Jianfeng Ren** and **Junwei Han**, published by Springer.
 
 ## Buy the Book
 
 Purchase **Mobile Computational Photography** on Amazon:
 
 **[Buy on Amazon](https://www.amazon.com/Mobile-Computational-Photography-Jianfeng-Ren/dp/9819595215)**
-
-## Slides for Instructors and Students
-
-Lecture slides (PDF) for all chapters are available in the [`slides/`](slides/) folder. Instructors and students are encouraged to download them for classroom use and self-study.
-
-To download:
-1. Browse to the [`slides/`](slides/) folder in this repository.
-2. Click on the PDF file for the chapter you need.
-3. Click the **Download** button to save it locally.
-
-Or clone the entire repository (see [Getting Started](#getting-started) below) to get all slides at once.
 
 ## Repository Structure
 
